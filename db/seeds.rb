@@ -21,21 +21,22 @@ Tag.delete_all
 # )
 # bacon.save
 
-# eggs = Recipe.new(
-#   recipe_name: "fried eggs",
-#   description: "eggs that are fried",
-#   cooking_instruction: "you fry the eggs",
-#   photo_url: "http://i.stack.imgur.com/ZuAmS.jpg",
-#   prep_time: "10 min",
-#   cook_time: "5 min",
-#   total_time: "15 min"
-# )
-# eggs.save
+eggs = Recipe.new(
+  recipe_name: "fried eggs",
+  description: "eggs that are fried",
+  cooking_instruction: "you fry the eggs",
+  photo_url: "http://i.stack.imgur.com/ZuAmS.jpg",
+  prep_time: "10 min",
+  cook_time: "5 min",
+  total_time: "15 min"
+)
 
 bbq = Tag.new(word: "#BBQ")
-bbq.save
 
+eggs.tags << bbq
+bbq.save
+eggs.save
+puts eggs.tags[0].word
 puts bbq.errors.full_messages
-puts bbq.word
 # puts bacon.errors.full_messages
-# puts eggs.errors.full_messages
+puts eggs.errors.full_messages
