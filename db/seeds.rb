@@ -1,6 +1,6 @@
 User.delete_all
 Recipe.delete_all
-
+Tag.delete_all
 # jacob = User.new(
 #   email: "ja@cob.com",
 #   password: "abc123"
@@ -15,22 +15,27 @@ Recipe.delete_all
 # puts jacob.errors.full_messages
 # puts amber.errors.full_messages
 
-bacon = Recipe.new(
-  description: "it's bacon",
-  cooking_instruction: "you fry it"
-)
-bacon.save
+# bacon = Recipe.new(
+#   description: "it's bacon",
+#   cooking_instruction: "you fry it"
+# )
+# bacon.save
 
-eggs = Recipe.new(
-  recipe_name: "fried eggs",
-  description: "eggs that are fried",
-  cooking_instruction: "you fry the eggs",
-  photo_url: "http://i.stack.imgur.com/ZuAmS.jpg",
-  prep_time: "10 min",
-  cook_time: "5 min",
-  total_time: "15 min"
-)
-eggs.save
+# eggs = Recipe.new(
+#   recipe_name: "fried eggs",
+#   description: "eggs that are fried",
+#   cooking_instruction: "you fry the eggs",
+#   photo_url: "http://i.stack.imgur.com/ZuAmS.jpg",
+#   prep_time: "10 min",
+#   cook_time: "5 min",
+#   total_time: "15 min"
+# )
+# eggs.save
 
-puts bacon.errors.full_messages
-puts eggs.errors.full_messages
+bbq = Tag.new(word: "#BBQ")
+bbq.save
+
+puts bbq.errors.full_messages
+puts bbq.word
+# puts bacon.errors.full_messages
+# puts eggs.errors.full_messages
