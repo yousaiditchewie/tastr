@@ -26,5 +26,13 @@
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation %>
   </div>
+  <div class="field">
+    <%= f.label :photo_url %>
+    <%= f.text_field :photo_url %>
+  </div>
+  <div class="field">
+    <%= f.label :about_me %>
+    <%= f.text_field :about_me %>
+  </div>
   <div class="actions"><%= f.submit %></div>
 <% end %>
