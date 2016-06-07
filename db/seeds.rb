@@ -2,6 +2,8 @@ User.delete_all
 Recipe.delete_all
 Tag.delete_all
 Like.delete_all
+Comment.delete_all
+
 # jacob = User.new(
 #   email: "ja@cob.com",
 #   password: "abc123"
@@ -35,18 +37,31 @@ eggs = Recipe.new(
 )
 eggs.save
 
+
 # bbq = Tag.new(word: "#BBQ")
 # eggs.tags << bbq
 # bbq.save
 # puts eggs.tags[0].word
 # puts bbq.errors.full_messages
+
+
 # salt = Ingredient.new(name: "salt")
 # salt.save
 # eggs.ingredients << salt
-like = Like.new(tick: 1)
-like.save
-eggs.likes << like
+
+
+# like = Like.new(tick: 1)
+# like.save
+# eggs.likes << like
+
+comment = Comment.new(text: "eggs, yummmmmmmmmm!")
+comment.save
+amber.comments << comment
+eggs.comments << comment
+
+amber.save
 eggs.save
 # puts salt.errors.full_messages
 # puts bacon.errors.full_messages
 puts eggs.errors.full_messages
+puts amber.errors.full_messages
