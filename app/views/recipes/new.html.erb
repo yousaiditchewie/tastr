@@ -1,0 +1,14 @@
+<h3>post a recipe</h3>
+
+<%= form_for @recipe do |f| %>
+  Recipe name <%= f.text_field :recipe_name %><br>
+  Link to photo <%= f.text_field :photo_url %><br>
+  Tell us about your recipe <%= f.text_field :description %><br>
+  Step-by-step instructions <%= f.text_field :cooking_instruction %><br>
+  Prep time (ex. 5 min) <%= f.text_field :prep_time %><br>
+  Cooking time (ex. 10 min) <%= f.text_field :cook_time %><br>
+  Total time (ex. 15 min) <%= f.text_field :total_time %><br>
+
+  <%= f.submit %><br>
+<%end%>
+<br><%= link_to 'Back', recipes_path %>
