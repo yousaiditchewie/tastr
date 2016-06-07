@@ -24,14 +24,6 @@ ActiveRecord::Schema.define(version: 20160607170515) do
     t.integer  "user_id"
   end
 
-  create_table "ingredients", force: :cascade do |t|
-    t.string   "name"
-    t.string   "quantity"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "recipe_id"
-  end
-
   create_table "likes", force: :cascade do |t|
     t.integer  "tick"
     t.datetime "created_at", null: false

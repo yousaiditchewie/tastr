@@ -16,7 +16,7 @@
       <ul class="nav navbar-nav center">
         <li class="navbar-text" role="button"><%= link_to 'Home', root_path %></li>
         <li class="navbar-text" role="button"><% if current_user %></li>
-        <li class="navbar-text">Welcome, <%= current_user.name %></li>
+        <li class="navbar-text"><a>Welcome, <%= current_user.name %></a></li>
           <li class="navbar-text" role="button"><%= link_to 'Search', new_user_path %></li>
           <li class="navbar-text" role="button"><%= link_to 'Log Out', session_path('dummy'), method: :delete %></li>
         <% else %>
