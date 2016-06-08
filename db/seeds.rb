@@ -4,27 +4,35 @@ Tag.delete_all
 Like.delete_all
 Comment.delete_all
 
-# jacob = User.new(
-#   email: "ja@cob.com",
-#   password: "abc123"
-# )
+jacob = User.new(
+  email: "ja@cob.com",
+  password: "abc123",
+  photo_url: "http://media.lehighvalleylive.com/phillipsburg_impact/photo/jacob-allen-6336f5b2f04c553d.jpg",
+  about_me: "Hi, I'm Jacob.  I like food."
+)
+jacob.save
 
 amber = User.new(
   name: "Amber",
   email: "am@ber.com",
   password: "abc123",
   photo_url: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwiOzMP92I3NAhVW3GMKHXZIDX8QjBwIBA&url=http%3A%2F%2Fcdn.akc.org%2Fakcdoglovers%2FCavalierKingCharlesSpaniel_hero_-_Copy.jpg&psig=AFQjCNFFiu0dO3uLfGPi-LwttG9eWtZfNA&ust=1465106448578372",
-  about_me: "Hi, I'm Amber.  I like my husband, Jacob."
+  about_me: "Hi, I'm Amber.  I like food."
 )
 amber.save
 # puts jacob.errors.full_messages
 puts amber.errors.full_messages
 
-# bacon = Recipe.new(
-#   description: "it's bacon",
-#   cooking_instruction: "you fry it"
-# )
-# bacon.save
+bacon = Recipe.new(
+  recipe_name: "Bacon",
+  description: "it's bacon",
+  cooking_instruction: "you fry it",
+  photo_url: "http://sites.psu.edu/siowfa15/wp-content/uploads/sites/29639/2015/10/Bacon.jpg",
+  prep_time: "5 min",
+  cook_time: "10 min",
+  total_time: "15 min"
+)
+bacon.save
 
 eggs = Recipe.new(
   recipe_name: "fried eggs",
@@ -54,13 +62,15 @@ eggs.save
 # like.save
 # eggs.likes << like
 
-comment = Comment.new(text: "eggs, yummmmmmmmmm!")
-comment.save
-amber.comments << comment
-eggs.comments << comment
-
+# comment = Comment.new(text: "eggs, yummmmmmmmmm!")
+# comment.save
+# amber.comments << comment
+# eggs.comments << comment
+amber.recipes << eggs
+jacob.recipes << bacon
 amber.save
-eggs.save
+jacob.save
+# eggs.save
 # puts salt.errors.full_messages
 # puts bacon.errors.full_messages
 puts eggs.errors.full_messages
