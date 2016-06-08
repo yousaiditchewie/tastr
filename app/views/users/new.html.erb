@@ -10,29 +10,31 @@
       </ul>
     </div>
   <% end %>
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <div class="field">
-    <%= f.label :photo_url %>
-    <%= f.text_field :photo_url %>
-  </div>
-  <div class="field">
-    <%= f.label :about_me %>
-    <%= f.text_field :about_me %>
-  </div>
+  <div class="container">
+  <div class="input-group">
+    <%#= f.label :name %>
+    <%= f.text_field :name, class: "form-control", placeholder: "name" %>
+  </div><br>
+  <div class="input-group">
+    <%#= f.label :email %>
+    <%= f.text_field :email, class: "form-control", placeholder: "email" %>
+  </div><br>
+  <div class="input-group">
+    <%#= f.label :password %>
+    <%= f.password_field :password, class: "form-control", placeholder: "password" %>
+  </div><br>
+  <div class="input-group">
+    <%#= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, class: "form-control", placeholder: "confirm password" %>
+  </div><br>
+  <div class="input-group">
+    <%#= f.label :photo_url %>
+    <%= f.text_field :photo_url, class: "form-control", placeholder: "photo url" %>
+  </div><br>
+  <div class="input-group">
+    <%#= f.label :about_me %>
+    <%= f.text_field :about_me, class: "form-control", placeholder: "about me" %>
+  </div><br>
   <div class="actions"><%= f.submit %></div>
 <% end %>
+</div>
