@@ -17,3 +17,9 @@ body {
   text-align: center;
   font-family: 'Rubik', sans-serif;
 }
+
+li {
+  list-style-type: none;
+  text-align: center;
+  padding: auto;
+}
