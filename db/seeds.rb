@@ -5,6 +5,7 @@ Like.delete_all
 Comment.delete_all
 
 jacob = User.new(
+  name: "Jacob",
   email: "ja@cob.com",
   password: "abc123",
   photo_url: "http://media.lehighvalleylive.com/phillipsburg_impact/photo/jacob-allen-6336f5b2f04c553d.jpg",
@@ -35,7 +36,7 @@ bacon = Recipe.new(
 bacon.save
 
 eggs = Recipe.new(
-  recipe_name: "fried eggs",
+  recipe_name: "Fried eggs",
   description: "eggs that are fried",
   cooking_instruction: "you fry the eggs",
   photo_url: "http://i.stack.imgur.com/ZuAmS.jpg",

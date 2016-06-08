@@ -1,6 +1,24 @@
-<h1>tāstr</h1>
-<div class="list-group">
-  <% @recipes.each do |recipe| %>
-    <%= link_to "#{recipe.recipe_name}", recipe_path(recipe), class: "list-group-item" %>
-  <%end%>
+<div class="jumbotron">
+  <h1>tāstr</h1>
+  <p>a place to find and share recipes</p>
+  <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more<!-- </a></p> -->
+</div>
+<!-- <div class="list-group">
+  <%# @recipes.each do |recipe| %>
+    <%#= link_to "#{recipe.recipe_name}", recipe_path(recipe), class: "list-group-item" %>
+  <%#end%>
+</div> -->
+<div class="row">
+    <% @recipes.each do |recipe| %>
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="#{recipe.photo_url}" alt="...">
+      <div class="caption">
+        <h3><%= "#{recipe.recipe_name}" %></h3>
+        <p><%= "#{recipe.description}" %></p>
+        <p><%= link_to "#{recipe.recipe_name}", recipe_path(recipe), class: "btn btn-primary", role: "button" %> <a href="#" class="btn btn-default" role="button">Like</a></p>
+      </div>
+    </div>
+  </div>
+      <%end%>
 </div>
