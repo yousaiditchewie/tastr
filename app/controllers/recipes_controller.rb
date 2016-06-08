@@ -23,7 +23,7 @@ class RecipesController < ApplicationController
     params.require(:recipe).permit(
       :recipe_name,
       :cooking_instruction,
-      :photo_url,
+      :recipe_pic,
       :description,
       :prep_time,
       :cook_time,
