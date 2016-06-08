@@ -104,8 +104,8 @@ breakfast_tacos.save
 # eggs.comments << comment
 # amber.recipes << eggs
 # jacob.recipes << bacon
-amber.save
-jacob.save
+# amber.save
+# jacob.save
 # eggs.save
 # puts salt.errors.full_messages
 # puts bacon.errors.full_messages
