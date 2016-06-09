@@ -51,6 +51,7 @@ class RecipesController < ApplicationController
       when 'user'
         redirect_to user_recipes_path(params[:recipe_user])
     end
+
   end
 
   private

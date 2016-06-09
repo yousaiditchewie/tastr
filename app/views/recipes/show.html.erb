@@ -1,13 +1,43 @@
-<h1><%= @recipe.recipe_name %></h1>
+<!-- <h1><%#= @recipe.recipe_name %></h1> -->
 
-<!-- picture of recipe -->
+<div class="page-header">
+  <h1><%= @recipe.recipe_name %></h1>
+</div>
 
-<div>
-  <ul>
-    <li><br><p>Description: </p><%= @recipe.description %></li>
-    <li><br><p>Cooking Instructions: </p><%= @recipe.cooking_instruction %></li>
-    <li><br><p>Prep Time : </p><%= @recipe.prep_time %></li>
-    <li><br><p>Cook Time: </p><%= @recipe.cook_time %></li>
-    <li><br><p>Total Time: </p><%= @recipe.total_time %></li>
+<%= image_tag @recipe.recipe_pic, class: "img-thumbnail" %>
+
+
+<div class="center-block">
+  <ul class="list-group">
+    <li class="list-group-item">Prep time: <span class="badge"><%= @recipe.prep_time %></span></li>
+    <li class="list-group-item">Cook time: <span class="badge"><%= @recipe.cook_time %></span></li>
+    <li class="list-group-item">Total time: <span class="badge"><%= @recipe.total_time %></span></li>
   </ul>
-<div>
+</div>
+
+<!-- <div>
+  <ul>
+    <li><br><p>Description: </p><%#= @recipe.description %></li>
+    <li><br><p>Cooking Instructions: </p><%#= @recipe.cooking_instruction %></li>
+  </ul>
+<div> -->
+<!-- <div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Description</h3>
+  </div>
+  <div class="panel-body">
+    <%#= @recipe.description %>
+  </div>
+</div> -->
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Cooking Instructions</h3>
+  </div>
+  <div class="panel-body">
+    <%= @recipe.cooking_instruction %>
+  </div>
+</div>
+
+<div class="container">
+  <%= link_to "#{@recipe.user.name}'s Recipes", user_recipes_path(@recipe.user), class: "btn btn-default" %>
+</div>
