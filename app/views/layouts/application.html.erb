@@ -16,9 +16,9 @@
     <div class="navbar-header">
       <ul class="nav navbar-nav center">
         <li class="navbar-text" role="button"><%= link_to 'tāstr', root_path %></li>
-        <li class="navbar-text" role="button"><%= link_to 'Add Recipe', new_recipe_path %></li>
         <% if current_user %>
-        <li class="navbar-text"><a>Welcome, <%= current_user.name %></a></li>
+          <li class="navbar-text"><%= link_to "#{current_user.name}'s Recipes", user_recipes_path(current_user) %></li>
+          <li class="navbar-text" role="button"><%= link_to 'Add Recipe', new_recipe_path %></li>
           <li class="navbar-text" role="button"><%= link_to 'Search', new_user_path %></li>
           <li class="navbar-text" role="button"><%= link_to 'Edit Profile', edit_user_path(current_user[:id]) %></li>
           <li class="navbar-text" role="button"><%= link_to 'Log Out', session_path('dummy'), method: :delete %></li>

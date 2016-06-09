@@ -1,0 +1,30 @@
+<div class="jumbotron">
+  <h1>Recipes by <%= @recipes[0].user.name %></h1>
+  <p class="text-info">a place to find and share recipes</p>
+  <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more<!-- </a></p> -->
+</div>
+<!-- <div class="list-group">
+  <%# @recipes.each do |recipe| %>
+    <%#= link_to "#{recipe.recipe_name}", recipe_path(recipe), class: "list-group-item" %>
+  <%#end%>
+</div> -->
+<div class="row">
+  <% @recipes.each do |recipe| %>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <%= image_tag recipe.recipe_pic.url %>
+        <div class="caption">
+          <h3><%= "#{recipe.recipe_name}" %></h3>
+          <p><%= "#{recipe.description}" %></p>
+          <p><%= link_to "View Recipe", recipe_path(recipe), class: "btn btn-primary", role: "button" %> <a href="#" class="btn btn-default" role="button">Like</a></p>
+          <p>
+            <% if current_user == recipe.user %>
+              <%= link_to "Edit Recipe", edit_recipe_path(recipe), class: "text-primary" %>
+              <%= link_to "Delete Recipe", recipe_path(recipe), method: :delete, class: "text-danger" %>
+            <% end %>
+        </p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

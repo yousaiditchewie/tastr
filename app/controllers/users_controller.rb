@@ -20,7 +20,13 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
   def update
+    @user = User.find(params[:id])
+    @user.update(user_params)
+    redirect_to recipes_path
+  end
 
+  def recipes
+    @recipes = User.find(params[:id]).recipes
   end
 
   private

@@ -41,7 +41,8 @@ carnitas = Recipe.new(
     Serve in a burrito or on tacos with your favorite salsa and toppings!",
   prep_time: "30 min",
   cook_time: "4 hr",
-  total_time: "4 hr, 30 min"
+  total_time: "4 hr, 30 min",
+  user: jacob
 )
 carnitas.save
 
@@ -61,7 +62,8 @@ burgers = Recipe.new(
     Once both sides have cooked to desired temperature, remove and serve on a bun with favorite toppings or bed of greens!",
   prep_time: "30 min",
   cook_time: "10 min",
-  total_time: "35 min"
+  total_time: "35 min",
+  user: jacob
 )
 burgers.save
 
@@ -79,7 +81,8 @@ breakfast_tacos = Recipe.new(
     When all elements are complete, assemble ingredients onto tortillas and top with salsa, cheese, or any other desired condiments, and enjoy!",
   prep_time: "20 min",
   cook_time: "45 min",
-  total_time: "1 hr, 5 min"
+  total_time: "1 hr, 5 min",
+  user: amber
 )
 breakfast_tacos.save
 # bbq = Tag.new(word: "#BBQ")

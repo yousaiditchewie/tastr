@@ -1,5 +1,10 @@
 <h1>Log In</h1>
-<p id="alert"><%= alert %></p>
+<% if alert %>
+  <div class="alert alert-warning alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <strong><%= alert %></strong>
+  </div>
+<% end %>
 <div class="container">
 <%= form_tag sessions_path do %>
   <div class="input-group">
