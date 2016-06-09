@@ -1,4 +1,4 @@
-<h1>Sign Up</h1>
+<h1>sign up for tāstr</h1>
 <%= form_for @user do |f| %>
   <% if @user.errors.any? %>
     <div class="error_messages">
@@ -10,29 +10,20 @@
       </ul>
     </div>
   <% end %>
-  <div class="container">
+  <div class="container row col-xs-4 col-xs-offset-4">
   <div class="input-group">
-    <%#= f.label :name %>
     <%= f.text_field :name, class: "form-control", placeholder: "name" %>
   </div><br>
   <div class="input-group">
-    <%#= f.label :email %>
     <%= f.text_field :email, class: "form-control", placeholder: "email" %>
   </div><br>
   <div class="input-group">
-    <%#= f.label :password %>
     <%= f.password_field :password, class: "form-control", placeholder: "password" %>
   </div><br>
   <div class="input-group">
-    <%#= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, class: "form-control", placeholder: "confirm password" %>
   </div><br>
   <div class="input-group">
-    <%#= f.label :photo_url %>
-    <%= f.text_field :photo_url, class: "form-control", placeholder: "photo url" %>
-  </div><br>
-  <div class="input-group">
-    <%#= f.label :about_me %>
     <%= f.text_field :about_me, class: "form-control", placeholder: "about me" %>
   </div><br>
   <div class="actions"><%= f.submit "Sign Up", class: "btn btn-default" %></div>
