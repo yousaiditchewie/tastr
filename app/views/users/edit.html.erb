@@ -1,0 +1,40 @@
+<h1>Edit your profile</h1>
+<%= form_tag @user do |f| %>
+  <% if @user.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @user.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="container">
+  <div class="input-group">
+    <%#= f.label :name %>
+    <%= text_field_tag :name, nil, class: "form-control", placeholder: "#{current_user.name}" %>
+  </div><br>
+  <div class="input-group">
+    <%#= f.label :email %>
+    <%= text_field_tag :email, nil, class: "form-control", placeholder: "#{current_user.email}" %>
+  </div><br>
+ <!--  <div class="input-group">
+    <%#= f.label :password %>
+    <%#= f.password_field :password, class: "form-control", placeholder: "password" %>
+  </div><br>
+  <div class="input-group">
+    <%#= f.label :password_confirmation %>
+    <%#= f.password_field :password_confirmation, class: "form-control", placeholder: "confirm password" %>
+  </div><br> -->
+  <div class="input-group">
+    <%#= f.label :photo_url %>
+    <%= text_field_tag :photo_url, nil, class: "form-control", placeholder: "Photo url" %>
+  </div><br>
+  <div class="input-group">
+    <%#= f.label :about_me %>
+    <%= text_field_tag :about_me, nil, class: "form-control", placeholder: "#{current_user.about_me}" %>
+  </div><br>
+  <div class="actions"><%= submit_tag "Submit", class: "btn btn-default" %></div>
+<% end %>
+</div>
