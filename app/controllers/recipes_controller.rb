@@ -38,6 +38,23 @@ class RecipesController < ApplicationController
     redirect_to user_recipes_path(current_user)
   end
 
+  def like
+    @recipe = Recipe.find(params[:id])
+    if !@recipe.likes.find_by(user_id: current_user.id)
+      Like.create(user: current_user, recipe: @recipe)
+    end
+    case params[:from]
+      when 'index'
+        redirect_to recipes_path
+      when 'show'
+        redirect_to recipe_path(@recipe)
+      when 'user'
+        redirect_to user_recipes_path(params[:recipe_user])
+    end
+  end
+
+  private
+
   def recipe_params
     params.require(:recipe).permit(
       :recipe_name,

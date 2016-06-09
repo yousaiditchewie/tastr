@@ -14,14 +14,18 @@
     <div class="thumbnail">
       <%= image_tag recipe.recipe_pic.url %>
       <div class="caption">
-        <h3><%= "#{recipe.recipe_name}" %></h3>
-        <p><%= "#{recipe.description}" %></p>
-        <p><%= link_to "View Recipe", recipe_path(recipe), class: "btn btn-primary", role: "button" %> <a href="#" class="btn btn-default" role="button">Like</a></p>
+        <h3><%= recipe.recipe_name %></h3>
+        <p><%= recipe.description %></p>
+        <p>Likes: <%= recipe.likes.count %></p>
+        <p>
+          <%= link_to "View Recipe", recipe_path(recipe), class: "btn btn-primary", role: "button" %>
+          <%= link_to "Like", recipe_like_path(recipe, from: "index"), class: "btn btn-default" if current_user && !current_user.likes.find_by(recipe_id: recipe.id) %>
+        </p>
         <p>
           <% if current_user == recipe.user %>
             <%= link_to "Delete Recipe", recipe_path(recipe), method: :delete, class: "text-danger" %>
           <% else %>
-            <%= link_to "#{recipe.user.name}", user_recipes_path(recipe.user) %>
+            <%= link_to recipe.user.name, user_recipes_path(recipe.user) %>
           <% end %>
         </p>
       </div>
