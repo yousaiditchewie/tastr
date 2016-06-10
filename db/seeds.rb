@@ -18,7 +18,7 @@ amber = User.new(
   email: "am@ber.com",
   password: "abc123",
   user_pic: File.open(File.join(Rails.root, '/app/assets/images/amber_profile.jpg')),
-  about_me: "Hi, I'm Amber.  Mornings are the worst so, I enjoy cooking food that makes waking up a little easier!"
+  about_me: "Hi, I'm Amber.  Mornings are the worst, so I enjoy cooking food that makes waking up a little easier!"
 )
 amber.save
 # puts jacob.errors.full_messages
