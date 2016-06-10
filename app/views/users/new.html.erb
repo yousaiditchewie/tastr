@@ -10,22 +10,34 @@
       </ul>
     </div>
   <% end %>
-  <div class="container row col-xs-4 col-xs-offset-4">
+<div class="container row col-xs-4 col-xs-offset-4">
+
   <div class="form-group">
     <%= f.text_field :name, class: "form-control", placeholder: "name" %>
   </div><br>
+
   <div class="form-group">
     <%= f.text_field :email, class: "form-control", placeholder: "email" %>
   </div><br>
+
   <div class="form-group">
     <%= f.password_field :password, class: "form-control", placeholder: "password" %>
   </div><br>
+
   <div class="form-group">
     <%= f.password_field :password_confirmation, class: "form-control", placeholder: "confirm password" %>
   </div><br>
+
+  <div class="form-group">
+    <label class="btn btn-default btn-file">
+      say cheese <%= f.file_field :user_pic, class: "form-control", style: "display: none", onchange: "$('#upload-file-info').html($(this).val());" %>
+    </label>
+    <span class="text-primary" id="upload-file-info"></span>
+  </div><br>
+
   <div class="form-group">
     <%= f.text_area :about_me, class: "form-control", placeholder: "about me" %>
   </div><br>
   <div class="actions"><%= f.submit "Sign Up", class: "btn btn-default" %></div>
-<% end %>
+  <% end %>
 </div>
