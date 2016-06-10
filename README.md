@@ -28,7 +28,7 @@ Users can upload pictures to their profile and to recipes for showing off their 
 
 ###Technologies used
 ___
-This is a full-stack Ruby on Rails application that utilizes HTML, CSS, Bootstrap, JavaScript, jQuery, PostgresQL, and is deployed on Heroku. 
+This is a full-stack Ruby on Rails application that utilizes HTML, CSS, Bootstrap, Paperclip, JavaScript, jQuery, PostgresQL, and is deployed on Heroku. 
 
 ###Design
 ___
