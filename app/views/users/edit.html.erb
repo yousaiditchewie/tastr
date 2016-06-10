@@ -22,7 +22,7 @@
     </div><br>
 
     <div class="form-group">
-    <label class="btn btn-default btn-file">
+    <label class="btn btn-primary btn-file">
       say cheese <%= f.file_field :user_pic, class: "form-control", style: "display: none", onchange: "$('#upload-file-info').html($(this).val());" %>
     </label>
     <span class="text-primary" id="upload-file-info"></span>
