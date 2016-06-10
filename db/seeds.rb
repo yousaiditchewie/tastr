@@ -29,10 +29,11 @@ carnitas = Recipe.new(
   recipe_pic: File.open(File.join(Rails.root, '/app/assets/images/carnitas.jpg')),
   description: "A marinated pork dish that's guaranteed to please.",
   cooking_instruction: "Rinse and dry a 4lb boneless pork shoulder roast.
+    Rub on a mixture of salt, pepper, cumin, and cayenne to taste, ensuring that all sides are coated in seasonings.
     Coarsely chop 1 onion, 1 jalapeño, and mince 4 cloves of garlic.
-    Place the rost in a large Dutch oven, and cover with the chopped veggies.
-    Pour the juice of two oranges over the roast and veggies.
-    Cook in the oven for 4 hours at 300 degrees, removing to baste every hour.
+    Place the rost in a large Dutch oven and top with the chopped veggies (no need to make it pretty, just pile them on!).
+    Squeeze two oranges over the roast and veggies.
+    Cover and cook in the oven for 4 hours at 300 degrees, removing to baste every hour.
     After cooking in the oven, remove the roast, separate the fat from the meat, and tear the meat into bite-sized chunks.
     Pour the juices and any bits of veggies into a small/medium saucepan, bring to a boil, and reduce the heat to simmer.
     Place the chunks of meat into a skillet (cast-iron works best) and brown on medium-high heat.
@@ -52,14 +53,14 @@ burgers = Recipe.new(
   description: "An easy way to make burgers look and taste like they came from a restaurant.",
   cooking_instruction: "Bring refrigerated beef to room temperature by allowing it to sit on the counter for at least 30 min.
     Form ground beef into 1/2 lb patties.  Be sure the patties are very wide, as they will likely shrink during cooking.
-    Pre-heat skillet to high/medium-high heat (cast-iron works best).  When the skillet is hot, generously salt and pepper the top side of the meat.
-    Add a pad of butter to the skillet, and add the patties seasoned-side-down.
+    Pre-heat skillet to medium-high heat (cast-iron works best).  When the skillet is hot, generously salt and pepper the top side of the meat.
+    Add a pad of butter to the skillet, and then add the patties seasoned-side-down.
     Using a thumb or forefinger, carefully make a small indention in the center of the patty.
-    This ensures the meat will not swell up and become a ball as it cooks.
-    After making the indention, generously salt and pepper the patty.
+    This ensures the meat will not swell up like a ball as it cooks.
+    After making the indention, generously salt and pepper the unseasoned side of the patty.
     After 5 min of cooking the first side, carefully flip the patty.
     If the first side is not cooked to desired darkness, do not flip, but allow to cook for another minute or two.
-    Once both sides have cooked to desired temperature, remove and serve on a bun with favorite toppings or bed of greens!",
+    Once both sides have cooked to desired temperature, remove and serve on a bun with favorite toppings or on a bed of greens!",
   prep_time: "30 min",
   cook_time: "10 min",
   total_time: "35 min",
@@ -71,14 +72,15 @@ breakfast_tacos = Recipe.new(
   recipe_name: "Breakfast Tacos",
   recipe_pic: File.open(File.join(Rails.root, '/app/assets/images/breakfast_tacos.jpg')),
   description: "Hearty breakfast tacos that make any morning feel like a fiesta.",
-  cooking_instruction: "Start by cookin bacon in a cast-iron skillet.  As the bacon cooks, preheat oven to 450 degrees.
+  cooking_instruction: "Start by cooking bacon in a cast-iron skillet.  As the bacon cooks, preheat oven to 450 degrees.
     Once the bacon is cooked to desired crispiness, remove and set aside.
-    Discard a small portion of the bacon grease, and add a coursely chopped potato to the skillet. Season with salt, cumin, and garlic powder.
+    Discard a small portion of the bacon grease, and add a coursely chopped potato to the skillet.
+    Season with salt, cumin, and garlic powder.
     Place the skillet in the oven to cook for about 45 min.
-    When there are 15 min remaining, add 1/4 of a coarsely chopped onion to the potatos.
+    When there are 15 min remaining, add 1/4 onion, coursely chopped, to the potatos.
     When potatoes are golden brown, remove from oven and set aside.
     Cook eggs as desired for the breakfast tacos.
-    When all elements are complete, assemble ingredients onto tortillas and top with salsa, cheese, or any other desired condiments, and enjoy!",
+    When all elements are complete, assemble ingredients onto tortillas and top with salsa, cheese, or any other desired condiments and enjoy!",
   prep_time: "20 min",
   cook_time: "45 min",
   total_time: "1 hr, 5 min",
