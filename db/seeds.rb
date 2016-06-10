@@ -13,6 +13,7 @@ jacob = User.new(
 )
 jacob.save
 puts jacob.errors.full_messages
+
 amber = User.new(
   name: "amber",
   email: "am@ber.com",
@@ -21,7 +22,6 @@ amber = User.new(
   about_me: "Hi, I'm Amber.  Mornings are the worst, so I enjoy cooking food that makes waking up a little easier!"
 )
 amber.save
-# puts jacob.errors.full_messages
 puts amber.errors.full_messages
 
 carnitas = Recipe.new(
@@ -103,33 +103,3 @@ breakfast_potatoes = Recipe.new(
   user: amber
 )
 breakfast_potatoes.save
-
-# bbq = Tag.new(word: "#BBQ")
-# eggs.tags << bbq
-# bbq.save
-# puts eggs.tags[0].word
-# puts bbq.errors.full_messages
-
-
-# salt = Ingredient.new(name: "salt")
-# salt.save
-# eggs.ingredients << salt
-
-
-# like = Like.new(tick: 1)
-# like.save
-# eggs.likes << like
-
-# comment = Comment.new(text: "eggs, yummmmmmmmmm!")
-# comment.save
-# amber.comments << comment
-# eggs.comments << comment
-# amber.recipes << eggs
-# jacob.recipes << bacon
-# amber.save
-# jacob.save
-# eggs.save
-# puts salt.errors.full_messages
-# puts bacon.errors.full_messages
-# puts eggs.errors.full_messages
-puts amber.errors.full_messages
