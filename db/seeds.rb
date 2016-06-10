@@ -9,7 +9,7 @@ jacob = User.new(
   email: "ja@cob.com",
   password: "abc123",
   user_pic: File.open(File.join(Rails.root, '/app/assets/images/jacob_profile.jpg')),
-  about_me: "Hi everyone, I'm the developer behind tāstr.  I hope you enjoy this humble web application.  Here are a few recipes to spark your creativity..."
+  about_me: "Hi everyone, I'm the developer behind tāstr.  I hope you enjoy this humble web application.  Here are some recipes to spark your creativity..."
 )
 jacob.save
 puts jacob.errors.full_messages
@@ -17,7 +17,8 @@ amber = User.new(
   name: "Amber",
   email: "am@ber.com",
   password: "abc123",
-  about_me: "Hi, I'm Amber.  I like food."
+  user_pic: File.open(File.join(Rails.root, '/app/assets/images/amber_profile.jpg')),
+  about_me: "Hi, I'm Amber. I enjoy cooking food that's healthy and makes me feel energized!"
 )
 amber.save
 # puts jacob.errors.full_messages

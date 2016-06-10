@@ -24,12 +24,12 @@
             <%= link_to "Like", recipe_like_path(recipe, from: "index"), class: "btn btn-default" if current_user && !current_user.likes.find_by(recipe_id: recipe.id) %>
           </p>
           <p>
-            <% if current_user == recipe.user %>
-              <%= link_to "Edit Recipe", edit_recipe_path(recipe), method: :delete, class: "text-primary" %>
-              <%= link_to "Delete Recipe", recipe_path(recipe), method: :delete, class: "text-danger" %>
-            <% else %>
-              <%= link_to recipe.user.name, user_recipes_path(recipe.user) %>
-            <% end %>
+            <%# if current_user == recipe.user %>
+              <%#= link_to "Edit Recipe", edit_recipe_path(recipe), method: :delete, class: "text-primary" %>
+              <%#= link_to "Delete Recipe", recipe_path(recipe), method: :delete, class: "text-danger" %>
+            <%# else %>
+              <%= link_to "More from #{recipe.user.name}", user_recipes_path(recipe.user) %>
+            <%# end %>
           </p>
         </div>
       </div>

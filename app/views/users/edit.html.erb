@@ -21,9 +21,12 @@
       <%= f.text_field :email, class: "form-control" %>
     </div><br>
 
-    <!-- <div class="form-group">
-      <%#= f.text_field :photo_url, class: "form-control" %>
-    </div><br>-->
+    <div class="form-group">
+    <label class="btn btn-default btn-file">
+      say cheese <%= f.file_field :user_pic, class: "form-control", style: "display: none", onchange: "$('#upload-file-info').html($(this).val());" %>
+    </label>
+    <span class="text-primary" id="upload-file-info"></span>
+  </div><br>
 
     <div class="form-group">
       <%= f.text_area :about_me, class: "form-control" %>
