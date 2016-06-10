@@ -18,7 +18,7 @@ amber = User.new(
   email: "am@ber.com",
   password: "abc123",
   user_pic: File.open(File.join(Rails.root, '/app/assets/images/amber_profile.jpg')),
-  about_me: "Hi, I'm Amber. Mornings are the worst.  I enjoy cooking food that makes waking up a little easier!"
+  about_me: "Hi, I'm Amber.  Mornings are the worst so, I enjoy cooking food that makes waking up a little easier!"
 )
 amber.save
 # puts jacob.errors.full_messages
@@ -41,8 +41,8 @@ carnitas = Recipe.new(
     Once the meat has reached the desired juiciness, the carnitas are finished.
     Serve in a burrito or on tacos with your favorite salsa and toppings!",
   prep_time: "30 min",
-  cook_time: "4 hr",
-  total_time: "4 hr, 30 min",
+  cook_time: "4 hr, 15 min",
+  total_time: "4 hr, 45 min",
   user: jacob
 )
 carnitas.save
@@ -87,6 +87,23 @@ breakfast_tacos = Recipe.new(
   user: amber
 )
 breakfast_tacos.save
+
+breakfast_potatoes = Recipe.new(
+  recipe_name: "Breakfast Potatoes",
+  recipe_pic: File.open(File.join(Rails.root, '/app/assets/images/breakfast_potatoes.jpg')),
+  description: "A filling breakfast dish that's easy on the wallet.",
+  cooking_instruction: "Pre-heat the oven to 450.  Dice a Russet or two into thin, round slices.
+    Lightly oil a cast-iron skillet and spread the potatoes evenly throughout.
+    Season with salt, pepper, garlic powder, and fresh rosemary sprigs.
+    Bake in the oven for 45-60 min or until lightly golden-brown.
+    If you want to add a little protein, crack eggs over the top and bake for about 5 min or until the egg whites are firm and cooked.",
+  prep_time: "10 min",
+  cook_time: "1 hr",
+  total_time: "1 hr, 10 min",
+  user: amber
+)
+breakfast_potatoes.save
+
 # bbq = Tag.new(word: "#BBQ")
 # eggs.tags << bbq
 # bbq.save
