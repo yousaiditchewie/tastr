@@ -5,7 +5,7 @@ Like.delete_all
 Comment.delete_all
 
 jacob = User.new(
-  name: "Jacob",
+  name: "jācob",
   email: "ja@cob.com",
   password: "abc123",
   user_pic: File.open(File.join(Rails.root, '/app/assets/images/jacob_profile.jpg')),
@@ -14,11 +14,11 @@ jacob = User.new(
 jacob.save
 puts jacob.errors.full_messages
 amber = User.new(
-  name: "Amber",
+  name: "amber",
   email: "am@ber.com",
   password: "abc123",
   user_pic: File.open(File.join(Rails.root, '/app/assets/images/amber_profile.jpg')),
-  about_me: "Hi, I'm Amber. I enjoy cooking food that's healthy and makes me feel energized!"
+  about_me: "Hi, I'm Amber. Mornings are the worst.  I enjoy cooking food that makes waking up a little easier!"
 )
 amber.save
 # puts jacob.errors.full_messages
