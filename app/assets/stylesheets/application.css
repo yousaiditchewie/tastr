@@ -20,7 +20,7 @@ p {
 
 .container {
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .btn-file {
@@ -43,3 +43,4 @@ p {
     cursor: inherit;
     display: block;
 }
+

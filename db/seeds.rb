@@ -8,16 +8,15 @@ jacob = User.new(
   name: "Jacob",
   email: "ja@cob.com",
   password: "abc123",
-  photo_url: "http://media.lehighvalleylive.com/phillipsburg_impact/photo/jacob-allen-6336f5b2f04c553d.jpg",
-  about_me: "Hi, I'm Jacob.  I like food."
+  user_pic: File.open(File.join(Rails.root, '/app/assets/images/jacob_profile.jpg')),
+  about_me: "Hi everyone, I'm the developer behind tāstr.  I hope you enjoy this humble web application.  Here are a few recipes to spark your creativity..."
 )
 jacob.save
-
+puts jacob.errors.full_messages
 amber = User.new(
   name: "Amber",
   email: "am@ber.com",
   password: "abc123",
-  photo_url: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwiOzMP92I3NAhVW3GMKHXZIDX8QjBwIBA&url=http%3A%2F%2Fcdn.akc.org%2Fakcdoglovers%2FCavalierKingCharlesSpaniel_hero_-_Copy.jpg&psig=AFQjCNFFiu0dO3uLfGPi-LwttG9eWtZfNA&ust=1465106448578372",
   about_me: "Hi, I'm Amber.  I like food."
 )
 amber.save

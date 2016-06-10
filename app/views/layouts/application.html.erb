@@ -14,12 +14,13 @@
  <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <ul class="nav navbar-nav center">
-        <li class="navbar-text navbar-left" role="button"><%= link_to 'tāstr', root_path %></li>
+      <ul class="nav navbar-nav navbar-left">
+        <li class="navbar-text" role="button"><%= link_to 'tāstr', root_path %></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
-          <li class="nav navbar-text"><%= link_to "#{current_user.name}'s Recipes", user_recipes_path(current_user) %></li>
           <li class="nav navbar-text" role="button"><%= link_to 'Add Recipe', new_recipe_path %></li>
-          <!-- <li class="navbar-text" role="button"><%#= link_to 'Search', new_user_path %></li> -->
+          <li class="nav navbar-text"><%= link_to "#{current_user.name}'s Profile", user_recipes_path(current_user) %></li>
           <li class="nav navbar-text" role="button"><%= link_to 'Edit Profile', edit_user_path(current_user[:id]) %></li>
           <li class="nav navbar-text" role="button"><%= link_to 'Log Out', session_path('dummy'), method: :delete %></li>
         <% else %>

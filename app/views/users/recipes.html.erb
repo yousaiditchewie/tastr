@@ -1,7 +1,20 @@
-<div class="jumbotron">
-  <h1>Recipes by <%= @recipes[0].user.name %></h1>
+
+  <div class="container">
+    <div class="float-left">
+        <%= image_tag @recipes[0].user.user_pic, class: "img-thumbnail" %>
+    </div>
+    <div class="float-right">
+      <h3 class="foat-right"><%= @recipes[0].user.name %></h3>
+      <%= @recipes[0].user.about_me %>
+    </div>
+  </div>
+
+
+
+<!-- <div class="jumbotron">
+  <h1><%#= @recipes[0].user.name %></h1>
   <p class="text-info">a place to find and share recipes</p>
-</div>
+</div> -->
 
 <div class="row">
   <% @recipes.each do |recipe| %>
