@@ -12,6 +12,13 @@
     </div><br>
 
     <div class="form-group">
+      <label class="btn btn-default btn-file">
+        upload a pic <%= f.file_field :recipe_pic, class: "form-control", style: "display: none", onchange: "$('#upload-file-info').html($(this).val());" %>
+      </label>
+      <span class="text-primary" id="upload-file-info"></span>
+    </div><br>
+
+    <div class="form-group">
       <%= f.text_field :prep_time, class: "form-control", placeholder: "Prep time (ex. 5 min)" %>
     </div><br>
 
@@ -24,15 +31,9 @@
     </div><br>
 
     <div class="form-group">
-      <%= f.text_field :cooking_instruction, class: "form-control", placeholder: "Step-by-step instructions" %>
+      <%= f.text_area :cooking_instruction, class: "form-control", placeholder: "Step-by-step instructions" %>
     </div><br>
 
-    <div class="form-group">
-      <label class="btn btn-default btn-file">
-        upload a pic <%= f.file_field :recipe_pic, class: "form-control", style: "display: none", onchange: "$('#upload-file-info').html($(this).val());" %>
-      </label>
-      <span class="text-primary" id="upload-file-info"></span>
-    </div><br>
 
     <%= f.submit "Add Recipe", class: "btn btn-default"%><br>
 
