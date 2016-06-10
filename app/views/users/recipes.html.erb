@@ -26,7 +26,7 @@
             <div class="panel-heading"><h3 class="panel-title"><%= "#{recipe.recipe_name}" %></h3></div>
             <p class="panel-body"><%= "#{recipe.description}" %></p>
           </div>
-          <p>Likes: <%= recipe.likes.count %></p>
+          <p>Likes  <span class="badge"><%= recipe.likes.count %></span></p>
           <p>
             <%= link_to "View Recipe", recipe_path(recipe), class: "btn btn-primary", role: "button" %>
             <%= link_to "Like", recipe_like_path(recipe, from: "user", recipe_user: recipe.user.id), class: "btn btn-default" if current_user && !current_user.likes.find_by(recipe_id: recipe.id) %>
